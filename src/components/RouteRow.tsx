@@ -29,6 +29,7 @@ export default function RouteRow({
           value={name}
           onChange={(e) => setRoute({ ...route, name: e.currentTarget.value })}
           placeholder="Name"
+          spellCheck={false}
           className="min-w-0 flex-1 bg-transparent px-2"
         />
         <input
@@ -37,6 +38,7 @@ export default function RouteRow({
             setRoute({ ...route, setter: e.currentTarget.value })
           }
           placeholder="Setter"
+          spellCheck={false}
           className="w-32 min-w-0 bg-transparent text-right"
         />
         <button
