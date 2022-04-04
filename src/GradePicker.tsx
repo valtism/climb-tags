@@ -37,12 +37,20 @@ export default function GradePicker({
         className="relative flex h-[72px] w-[72px] flex-shrink-0 items-center justify-center overflow-hidden rounded-full border-4 border-gray-300 ring-gray-300 hover:ring-2"
       >
         <button
-          className="flex h-full w-full items-center justify-center"
-          style={{ backgroundColor: color }}
           onClick={() => setOpen(true)}
+          className="flex items-center justify-center"
         >
+          {/* The color must be rendered in an SVG because print will un-style background colors */}
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-full w-full"
+            viewBox="0 0 1 1"
+            fill={color}
+          >
+            <rect width="100%" height="100%" />
+          </svg>
           <div
-            className="pointer-events-none text-[2.75rem] font-medium"
+            className="pointer-events-none absolute text-[2.75rem] font-medium"
             style={{ color: Color(color).isLight() ? "#000" : "#fff" }}
           >
             {grade}
