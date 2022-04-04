@@ -1,5 +1,7 @@
+import { GradeButton } from "./GradeButton";
 import { Route } from "./Constants";
-import GradePicker from "./GradePicker";
+import Popper from "./Popper";
+import GradePopup from "./GradePopup";
 
 interface RouteRowProps {
   route: Route;
@@ -15,12 +17,14 @@ export default function RouteRow({
   return (
     <div>
       <div className="group relative -mr-8 flex items-center space-x-4 py-1 pr-8 text-3xl">
-        <GradePicker
-          color={color}
-          setColor={(color) => setRoute({ ...route, color })}
-          grade={grade}
-          setGrade={(grade) => setRoute({ ...route, grade })}
-        />
+        <Popper RefNode={<GradeButton color={color} grade={grade} />}>
+          <GradePopup
+            grade={grade}
+            setGrade={(grade) => setRoute({ ...route, grade })}
+            color={color}
+            setColor={(color) => setRoute({ ...route, color })}
+          />
+        </Popper>
         <input
           value={name}
           onChange={(e) => setRoute({ ...route, name: e.currentTarget.value })}

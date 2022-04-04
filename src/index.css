@@ -7,5 +7,5 @@
 /* For salamander logo */
 @font-face {
   font-family: "icomoon";
-  src: url("/src/fonts/icomoon.woff") format("woff");
+  src: url("/src/assets/icomoon.woff") format("woff");
 }

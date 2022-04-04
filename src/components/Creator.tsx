@@ -6,7 +6,10 @@ import RouteRow from "./RouteRow";
 export default function Creator() {
   const [routes, setRoutes] = useState<Route[]>([initialRoute]);
   return (
-    <div className="flex h-[460px] w-[700px] flex-col space-y-2 font-Ubuntu">
+    <div
+      className="flex h-[460px] w-[700px] flex-col space-y-2 font-Ubuntu"
+      style={{ printColorAdjust: "exact" }}
+    >
       <Header />
       <main className="flex h-full flex-col justify-between py-1 pl-4 pr-8">
         <div className="flex flex-col space-y-2">
@@ -68,7 +71,7 @@ function AddRouteButton(props: ButtonHTMLAttributes<HTMLButtonElement>) {
 
 function SetOn() {
   return (
-    <div className="flex items-center justify-center space-x-2 pl-16 text-gray-500">
+    <div className="flex items-center justify-center space-x-2 pl-10 text-gray-500">
       <span>Set On:</span>
       <input className="w-32 min-w-0" type="date" />
     </div>
