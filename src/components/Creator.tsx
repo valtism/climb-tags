@@ -61,7 +61,7 @@ function AddRouteButton(props: ButtonHTMLAttributes<HTMLButtonElement>) {
     <div className="flex justify-center print:hidden">
       <button
         {...props}
-        className="rounded bg-red-300 px-2 py-1 text-white hover:bg-red-400"
+        className="rounded bg-red-400 px-2 py-1 text-white hover:bg-red-500"
       >
         Add Route
       </button>
