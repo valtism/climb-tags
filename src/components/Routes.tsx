@@ -7,7 +7,7 @@ interface RoutesProps {
 }
 export default function Routes({ routes, setRoutes }: RoutesProps) {
   return (
-    <div className="flex flex-col divide-y-2">
+    <div className="flex flex-col divide-y-2 divide-gray-500">
       {routes.map((route, index) => {
         function setRoute(newRoute: Route) {
           setRoutes(routes.map((route, i) => (i === index ? newRoute : route)));
