@@ -1,23 +1,30 @@
 import { Children, ReactNode } from "react";
 import { useDragX } from "../hooks/useDragX";
 
-interface Children {
+interface ResizableSegmentsProps {
   children?: ReactNode;
 }
-
-export default function ResizableSegments({ children }: Children) {
+export default function ResizableSegments({
+  children,
+}: ResizableSegmentsProps) {
   const childrenCount = Children.count(children);
   return (
     <div className="relative flex flex-1 overflow-hidden">
       {Children.map(children, (child, i) =>
-        i !== childrenCount - 1 ? <Segment>{child}</Segment> : child
+        i !== childrenCount - 1 ? <Segment initialSize={380}>{child}</Segment> : child
       )}
     </div>
   );
 }
 
-function Segment({ children }: Children) {
-  const [x, sizeRef, dragRef] = useDragX<HTMLDivElement, HTMLDivElement>();
+interface SegmentProps {
+  children?: ReactNode;
+  initialSize?: number;
+}
+function Segment({ children, initialSize }: SegmentProps) {
+  const [x, sizeRef, dragRef] = useDragX<HTMLDivElement, HTMLDivElement>(
+    initialSize
+  );
   return (
     <>
       <div ref={sizeRef} className="overflow-hidden" style={{ width: x }}>
@@ -29,6 +36,7 @@ function Segment({ children }: Children) {
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
+          className="h-full w-full"
           viewBox="0 0 192 512"
           fill="currentColor"
         >

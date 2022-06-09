@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
 import { useRefValue } from "./useRefValue";
 
-export function useDragX<T extends HTMLElement, U extends HTMLElement>() {
+export function useDragX<T extends HTMLElement, U extends HTMLElement>(
+  initialSize?: number
+) {
   const [dragging, setDragging] = useState(false);
-  const [x, setX] = useState<number>();
+  const [x, setX] = useState<number | undefined>(initialSize);
   const [offset, setOffset] = useState(0);
   const [sizeRef, sizeEl] = useRefValue<T>();
   const [dragRef, dragEl] = useRefValue<U>();
