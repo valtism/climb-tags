@@ -15,12 +15,12 @@ export default function GradePopup({
 }: GradePopupProps) {
   return (
     <div className="flex flex-col items-center space-y-2 rounded border bg-white p-2 shadow-lg">
-      <div className="text-sm font-medium uppercase text-gray-500">Grade:</div>
+      <div className="text-sm font-medium uppercase text-gray-800">Grade:</div>
       <input
         autoFocus
         value={grade?.toString() || ""}
         onChange={(e) => setGrade(e.currentTarget.value)}
-        className="w-32 rounded bg-gray-100 text-center text-xl hover:bg-gray-200 focus:bg-gray-200"
+        className="w-32 rounded bg-gray-100 text-center text-xl hover:bg-gray-200 focus:outline-none focus:ring"
       />
       <ColorPicker color={color} setColor={setColor} />
     </div>

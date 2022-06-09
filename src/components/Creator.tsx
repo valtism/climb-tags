@@ -1,7 +1,7 @@
 import { ButtonHTMLAttributes, useState } from "react";
 import { initialRoute, Route } from "./Constants";
 import Header from "./Header";
-import RouteRow from "./RouteRow";
+import Routes from "./Routes";
 
 export default function Creator() {
   const [routes, setRoutes] = useState<Route[]>([initialRoute]);
@@ -14,26 +14,7 @@ export default function Creator() {
       <main className="flex h-full flex-col justify-between py-1 pl-4 pr-8">
         <div className="flex flex-col space-y-2">
           <TableHeader />
-          <div className="flex flex-col divide-y-2">
-            {routes.map((route, index) => {
-              function setRoute(newRoute: Route) {
-                setRoutes(
-                  routes.map((route, i) => (i === index ? newRoute : route))
-                );
-              }
-              function removeRoute() {
-                setRoutes(routes.filter((_, i) => i !== index));
-              }
-              return (
-                <RouteRow
-                  key={index}
-                  route={route}
-                  setRoute={setRoute}
-                  removeRoute={removeRoute}
-                />
-              );
-            })}
-          </div>
+          <Routes routes={routes} setRoutes={setRoutes} />
           {routes.length < 3 && (
             <AddRouteButton
               onClick={() => setRoutes([...routes, initialRoute])}
@@ -48,8 +29,8 @@ export default function Creator() {
 
 function TableHeader() {
   return (
-    <div className="flex items-center space-x-6 text-xl font-medium uppercase text-gray-500">
-      <span className="w-[72px] text-center">Grade</span>
+    <div className="flex items-center space-x-6 text-xl font-medium uppercase">
+      <span className="w-[84px] text-center">Grade</span>
       <span className="flex-1">Name</span>
       <span>Setter</span>
     </div>
@@ -71,7 +52,7 @@ function AddRouteButton(props: ButtonHTMLAttributes<HTMLButtonElement>) {
 
 function SetOn() {
   return (
-    <div className="flex items-center justify-center space-x-2 pl-10 text-gray-500">
+    <div className="flex items-center justify-center space-x-2 pl-10 text-gray-800">
       <span>Set On:</span>
       <input className="w-32 min-w-0" type="date" />
     </div>

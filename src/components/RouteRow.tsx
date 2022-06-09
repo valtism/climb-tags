@@ -2,6 +2,7 @@ import { GradeButton } from "./GradeButton";
 import { Route } from "./Constants";
 import Popper from "./Popper";
 import GradePopup from "./GradePopup";
+import ResizableSegments from "./ResizableSegments";
 
 interface RouteRowProps {
   route: Route;
@@ -16,7 +17,7 @@ export default function RouteRow({
   const { color, grade, name, setter } = route;
   return (
     <div>
-      <div className="group relative -mr-8 flex items-center space-x-4 py-1 pr-8 text-3xl">
+      <div className="group relative -mr-8 flex items-center space-x-6 py-1 pr-8 text-4xl">
         <Popper RefNode={<GradeButton color={color} grade={grade} />}>
           <GradePopup
             grade={grade}
@@ -25,22 +26,27 @@ export default function RouteRow({
             setColor={(color) => setRoute({ ...route, color })}
           />
         </Popper>
-        <input
-          value={name}
-          onChange={(e) => setRoute({ ...route, name: e.currentTarget.value })}
-          placeholder="Name"
-          spellCheck={false}
-          className="min-w-0 flex-1 bg-transparent px-2"
-        />
-        <input
-          value={setter}
-          onChange={(e) =>
-            setRoute({ ...route, setter: e.currentTarget.value })
-          }
-          placeholder="Setter"
-          spellCheck={false}
-          className="w-32 min-w-0 bg-transparent text-right"
-        />
+        <ResizableSegments>
+          <input
+            value={name}
+            onChange={(e) =>
+              setRoute({ ...route, name: e.currentTarget.value })
+            }
+            placeholder="Name"
+            spellCheck={false}
+            className="min-w-0 flex-1 bg-transparent focus:outline-none"
+          />
+
+          <input
+            value={setter}
+            onChange={(e) =>
+              setRoute({ ...route, setter: e.currentTarget.value })
+            }
+            placeholder="Setter"
+            spellCheck={false}
+            className="min-w-0 flex-1 bg-transparent focus:outline-none text-right"
+          />
+        </ResizableSegments>
         <button
           onClick={removeRoute}
           className="invisible absolute -right-4 mt-1 flex h-10 w-12 items-center justify-center text-xl text-gray-400 hover:text-gray-900 group-hover:visible"
