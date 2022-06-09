@@ -3,7 +3,7 @@ import Creator from "./Creator";
 export default function App() {
   return (
     <div className="flex min-h-screen flex-col caret-red-700 selection:bg-red-200">
-      <div className="mx-auto space-y-20 py-6">
+      <div className="mx-auto space-y-14 pt-6">
         <Creator />
         <Creator />
       </div>
