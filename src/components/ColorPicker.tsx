@@ -1,10 +1,4 @@
-import {
-  ButtonHTMLAttributes,
-  SVGProps,
-  useEffect,
-  useRef,
-  useState,
-} from "react";
+import { ButtonHTMLAttributes, SVGProps } from "react";
 import clsx from "clsx";
 import { ColorType, DefaultColors } from "./Constants";
 
@@ -70,8 +64,4 @@ function DotIcon(props: SVGProps<SVGSVGElement>) {
       <rect width="15" height="15" x="0.5" y="0.5" rx="9" />
     </svg>
   );
-}
-
-function isValidHex(color: string) {
-  return /^#([0-9A-F]{3}|[0-9A-F]{6})$/i.test(color);
 }
