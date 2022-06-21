@@ -5,7 +5,7 @@ export default function Document() {
     <Html>
       <Head>
         <meta charSet="UTF-8" />
-        <link rel="icon" href="../public/favicon.ico.gif" />
+        <link rel="icon" href="/favicon.ico.gif" />
         <link rel="apple-touch-icon-precomposed" href="/public/touch.png" />
 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
