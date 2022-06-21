@@ -7,7 +7,7 @@ export default function Creator() {
   const [routes, setRoutes] = useState<Route[]>([initialRoute]);
   return (
     <div
-      className="flex h-[460px] w-[700px] flex-col space-y-2 font-Ubuntu"
+      className="flex h-[460px] w-[700px] flex-col space-y-2"
       style={{ printColorAdjust: "exact" }}
     >
       <Header />

@@ -1,21 +1,20 @@
 import Creator from "./Creator";
+import { FeedbackForm } from "./FeedbackForm";
+import { MadeBy } from "./MadeBy";
 
 export default function App() {
   return (
-    <div className="flex min-h-screen flex-col caret-red-700 selection:bg-red-200">
+    <div className="flex min-h-screen flex-col font-Ubuntu selection:bg-rose-200">
       <div className="mx-auto space-y-14 pt-6">
         <Creator />
         <Creator />
       </div>
-      <div className="mt-auto print:hidden">
-        <div className="flex justify-end space-x-1 p-2">
-          <span className="text-gray-500">Made by</span>
-          <a
-            href="https://github.com/valtism/climb-tags"
-            className="bg-gradient-to-r from-pink-400 via-purple-500 to-pink-400 bg-clip-text text-transparent drop-shadow filter"
-          >
-            @valtism
-          </a>
+      <div className="bg-gray-100 print:hidden mt-10">
+        <div className="mx-auto max-w-4xl py-10">
+          <FeedbackForm />
+        </div>
+        <div className="mx-4">
+          <MadeBy />
         </div>
       </div>
     </div>

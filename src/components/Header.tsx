@@ -3,7 +3,7 @@ import { Salamander } from "./Constants";
 export default function Header() {
   return (
     <header className="flex items-center justify-between px-2 py-1">
-      <div className="flex flex-col px-2 font-Ubuntu text-2xl font-extrabold uppercase leading-[1]">
+      <div className="flex flex-col px-2 text-2xl font-extrabold uppercase leading-[1]">
         <span>Sydney</span>
         <span>Indoor</span>
         <span>Climbing</span>
