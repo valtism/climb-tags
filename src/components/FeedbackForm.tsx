@@ -13,7 +13,7 @@ export function FeedbackForm() {
       </div>
       <div className="col-span-2 mt-0">
         {/* @ts-expect-error netlify is a custom form attribute netlify uses for backend forms */}
-        <form name="feedback" method="POST" data-netlify="true" netlify>
+        <form name="feedback" method="POST" netlify>
           <div className="overflow-hidden rounded-md shadow">
             <div className="space-y-6 bg-white p-6">
               <div>
