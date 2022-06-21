@@ -2,7 +2,7 @@ export function FeedbackForm() {
   return (
     <div className="grid grid-cols-3 gap-6">
       <div className="col-span-1">
-        <div className="px-0">
+        <div className="mt-1">
           <h3 className="text-lg font-medium leading-6 text-gray-900">
             Feedback
           </h3>
