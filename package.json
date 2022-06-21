@@ -1,36 +1,31 @@
 {
-  "name": "climb-tags",
+  "name": "climb-tags-next",
+  "version": "0.1.0",
   "private": true,
-  "version": "1.1.0",
   "scripts": {
-    "start": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview"
+    "dev": "PORT=3280 next dev",
+    "build": "next build",
+    "start": "PORT=3290 next start",
+    "lint": "next lint"
   },
   "dependencies": {
-    "@floating-ui/react-dom-interactions": "^0.6.3",
+    "@floating-ui/react-dom-interactions": "^0.6.5",
     "clsx": "^1.1.1",
-    "color": "^4.2.1",
-    "react": "^18.1.0",
-    "react-dom": "^18.1.0"
+    "color": "^4.2.3",
+    "next": "12.1.6",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
   },
   "devDependencies": {
-    "@nabla/vite-plugin-eslint": "^1.4.0",
     "@types/color": "^3.0.3",
-    "@types/react": "^18.0.12",
-    "@types/react-dom": "^18.0.5",
-    "@typescript-eslint/eslint-plugin": "^5.17.0",
-    "@typescript-eslint/parser": "^5.17.0",
-    "@vitejs/plugin-react": "^1.3.0",
-    "autoprefixer": "^10.4.4",
-    "eslint": "^8.12.0",
-    "eslint-plugin-react": "^7.29.4",
-    "eslint-plugin-react-hooks": "^4.4.0",
-    "postcss": "^8.4.12",
-    "prettier": "^2.6.2",
-    "prettier-plugin-tailwindcss": "^0.1.8",
-    "tailwindcss": "^3.0.23",
-    "typescript": "^4.6.3",
-    "vite": "^2.9.1"
+    "@types/node": "18.0.0",
+    "@types/react": "18.0.14",
+    "@types/react-dom": "18.0.5",
+    "autoprefixer": "^10.4.7",
+    "eslint": "8.18.0",
+    "eslint-config-next": "12.1.6",
+    "postcss": "^8.4.14",
+    "tailwindcss": "^3.1.3",
+    "typescript": "4.7.4"
   }
 }
