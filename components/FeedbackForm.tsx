@@ -18,6 +18,7 @@ export function FeedbackForm() {
           method="POST"
           data-netlify="true"
         >
+          <input type="hidden" name="form-name" value="feedback" />
           <div className="overflow-hidden rounded-md shadow">
             <div className="space-y-6 bg-white p-6">
               <div>

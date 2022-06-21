@@ -21,6 +21,7 @@ const Home: NextPage = () => {
           <Creator />
           <Creator />
         </div>
+        <div className="print:hidden w-full h-20" />
       </div>
     </>
   );
