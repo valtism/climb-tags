@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
+import { Changelog } from "../components/Changelog";
 import Creator from "../components/Creator";
 import { FeedbackForm } from "../components/FeedbackForm";
 import { MadeBy } from "../components/MadeBy";
@@ -16,12 +17,17 @@ const Home: NextPage = () => {
           <Creator />
           <Creator />
         </div>
-        <footer className="px-6 pt-20 mt-20 bg-gray-100 print:hidden">
-          <div className="max-w-4xl mx-auto pb-10">
+        <div className="mt-20 bg-gray-100 px-6 pt-20 print:hidden">
+          <div className="mx-auto max-w-4xl pb-10">
             <FeedbackForm />
           </div>
+        </div>
+        <footer className="bg-gray-900 px-6 pt-20 text-white print:hidden">
+          <div className="mx-auto max-w-4xl pb-10">
+            <Changelog />
+          </div>
           <div className="flex justify-end">
-          <MadeBy />
+            <MadeBy />
           </div>
         </footer>
       </div>

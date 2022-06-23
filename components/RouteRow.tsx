@@ -34,7 +34,7 @@ export default function RouteRow({
             }
             placeholder="Name"
             spellCheck={false}
-            className="min-w-0 flex-1 bg-transparent focus:outline-none"
+            className="min-w-0 flex-1 bg-transparent focus:outline-none tracking-wide"
           />
 
           <input
@@ -44,7 +44,7 @@ export default function RouteRow({
             }
             placeholder="Setter"
             spellCheck={false}
-            className="min-w-0 flex-1 bg-transparent focus:outline-none text-right"
+            className="min-w-0 flex-1 bg-transparent focus:outline-none text-right tracking-wide"
           />
         </ResizableSegments>
         <button

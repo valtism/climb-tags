@@ -33,3 +33,5 @@ export const initialRoute: Route = {
   name: "",
   setter: "",
 };
+
+export const GradeWidth = 160;

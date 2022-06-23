@@ -11,7 +11,11 @@ export default function ResizableSegments({
   return (
     <div className="relative flex flex-1 overflow-hidden">
       {Children.map(children, (child, i) =>
-        i !== childrenCount - 1 ? <Segment initialSize={380}>{child}</Segment> : child
+        i !== childrenCount - 1 ? (
+          <Segment initialSize={335}>{child}</Segment>
+        ) : (
+          child
+        )
       )}
     </div>
   );
