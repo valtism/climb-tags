@@ -5,6 +5,7 @@ export default function Document() {
     <Html>
       <Head>
         <meta charSet="UTF-8" />
+
         <link rel="icon" href="/favicon.ico.gif" />
         <link rel="apple-touch-icon-precomposed" href="/public/touch.png" />
 
@@ -14,6 +15,7 @@ export default function Document() {
           href="https://fonts.gstatic.com"
           crossOrigin="true"
         />
+        {/* eslint-disable-next-line @next/next/google-font-display */}
         <link
           href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=block"
           rel="stylesheet"
