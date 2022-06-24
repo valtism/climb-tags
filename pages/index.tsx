@@ -1,6 +1,5 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Link from "next/link";
 import { Changelog } from "../components/Changelog";
 import Creator from "../components/Creator";
 import { FeedbackForm } from "../components/FeedbackForm";
@@ -13,7 +12,7 @@ const Home: NextPage = () => {
         <title>Climb Tag Creator</title>
       </Head>
       <div className="flex min-h-screen flex-col font-Ubuntu selection:bg-rose-200">
-        <div className="mx-auto space-y-14 pt-6">
+        <div className="mx-auto max-w-full space-y-14 overflow-auto pt-6 sm:overflow-visible">
           <Creator />
           <Creator />
         </div>
