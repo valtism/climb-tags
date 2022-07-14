@@ -24,7 +24,7 @@ export const DefaultColors: ColorType[] = [
   { name: "Teal", hex: "#68ccca" },
   { name: "Blue", hex: "#004dcf" },
   { name: "Purple", hex: "#9900ef" },
-  { name: "Pink", hex: "#fa28af" },
+  { name: "Pink", hex: "#ff5cc5" },
 ];
 
 export const initialRoute: Route = {
@@ -34,4 +34,4 @@ export const initialRoute: Route = {
   setter: "",
 };
 
-export const GradeWidth = 160;
+export const GradeWidth = 164;

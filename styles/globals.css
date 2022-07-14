@@ -7,3 +7,10 @@
   font-family: "icomoon";
   src: url("/icomoon.woff") format("woff");
 }
+
+/* Remove calendar icon from date picker */
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+}

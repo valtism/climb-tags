@@ -10,7 +10,7 @@ export default function Creator() {
       className="relative flex h-[460px] w-[700px] flex-col space-x-2"
       style={{ printColorAdjust: "exact" }}
     >
-      <div className="flex h-full flex-col justify-between py-1 pl-4 pr-8">
+      <div className="flex h-full flex-col justify-between py-1 pl-4 pr-8 sm:px-0">
         <div className="flex flex-col space-y-2">
           <Logos />
           <TableHeader />
@@ -56,7 +56,7 @@ function SetOn() {
   return (
     <div className="flex items-center justify-center space-x-2 pl-10 text-xl text-gray-800">
       <span>Set On:</span>
-      <input className="w-32 min-w-0" type="date" />
+      <input type="date" />
     </div>
   );
 }

@@ -9,7 +9,7 @@ export default function Logos() {
         <span>Climbing</span>
         <span>Gym</span>
       </div>
-      <div className="font-icomoon text-[6rem] leading-[1em] text-[#eb3453]">
+      <div className="font-icomoon text-[10rem] leading-[0.6em] text-[#eb3453] -rotate-90 h-24">
         {Salamander}
       </div>
     </header>
