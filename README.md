@@ -4,7 +4,7 @@ Generator for route information tags at [Sydney Indoor Climbing Gym](http://indo
 
 The info leaflets currently are very difficult to read from a distance, with poor font legibility and an outdated design. This is an unsolicited attempt to provide a way to produce cleaner and more readable tags.
 
-[Try it out for yourself!](https://climb-tag-generator.netlify.app)
+[Try it out for yourself!](https://sicg.valtism.com)
 
 The original tag:
 
