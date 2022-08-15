@@ -13,18 +13,18 @@ export interface Route {
 }
 
 export const DefaultColors: ColorType[] = [
-  { name: "Black", hex: "#333333" },
-  { name: "Gray", hex: "#666666" },
-  { name: "White", hex: "#fbf8f8" },
-  { name: "Red", hex: "#dc2626" },
-  { name: "Orange", hex: "#f97316" },
-  { name: "Yellow", hex: "#fccb00" },
-  { name: "Lime", hex: "#50e405" },
-  { name: "Green", hex: "#008b02" },
-  { name: "Teal", hex: "#68ccca" },
-  { name: "Blue", hex: "#004dcf" },
-  { name: "Purple", hex: "#9900ef" },
-  { name: "Pink", hex: "#ff5cc5" },
+  { name: "Black", hex: "#333" },
+  { name: "Gray", hex: "#666" },
+  { name: "White", hex: "#fff" },
+  { name: "Red", hex: "#d22" },
+  { name: "Orange", hex: "#f71" },
+  { name: "Yellow", hex: "#fc0" },
+  { name: "Lime", hex: "#5e0" },
+  { name: "Green", hex: "#080" },
+  { name: "Teal", hex: "#7cc" },
+  { name: "Blue", hex: "#04d" },
+  { name: "Purple", hex: "#a2e" },
+  { name: "Pink", hex: "#f5c" },
 ];
 
 export const initialRoute: Route = {
